@@ -276,23 +276,28 @@ def generateTable(cat: dict, freqSubset: list = ['ALL']):
 			('u_P1', u.second * 1e-15 / u.second, float, "Uncertainty of spin down rate (seconds per second)"),
 			('AGE', u.megayear, float, "Characteristic Age"),
 			('B', u.gauss * 1e12, float, "Surface Magnetic Field"),
-			("RA_ref", None, str, "Key ref"),
-			("DEC_ref",None, str, "Key ref"),
-			("DM_ref", None, str, "Key ref"),
-			('P0_ref', None, str, "Key ref"),
-			('P1_ref', None, str, "Key ref"),
 	]
 
 	freqs = getFreqsInCatalogue(cat, freqSubset)
 
-	for freq in freqs:
+	for freq in sorted(freqs):
 		columnsUnits += [
 			(f'S_peak_{freq}', u.jansky, float, f"Brightest pulse flux density at {freq}MHz"),
 			(f'S_mean_{freq}', u.jansky, float, f"Mean pulse flux density at {freq}MHz"),
 			(f'Rate_{freq}', 1. / u.hour, float, f"Typical hourly pulse rate at {freq}MHz"),
 			(f'Width_{freq}', u.second / 1000, float, f"Typical pulse width at {freq}MHz"),
 			(f'NTOA_{freq}', u.dimensionless_unscaled, float, f"Number of observed pulses at {freq}MHz"),
-			(f'S_peak_{freq}_ref', None, str, "Key ref"),
+		]
+
+	columnsUnits += [
+			("RA_ref", None, str, "Key ref"),
+			("DEC_ref",None, str, "Key ref"),
+			("DM_ref", None, str, "Key ref"),
+			('P0_ref', None, str, "Key ref"),
+			('P1_ref', None, str, "Key ref"),
+		]
+	for freq in sorted(freqs):
+		columnsUnits += [ (f'S_peak_{freq}_ref', None, str, "Key ref"),
 			(f'S_mean_{freq}_ref', None, str, "Key ref"),
 			(f'Rate_{freq}_ref', None, str, "Key ref"),
 			(f'Width_{freq}_ref', None, str, "Key ref"),
