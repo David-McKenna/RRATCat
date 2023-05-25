@@ -304,7 +304,7 @@ def generateTable(cat: dict, freqSubset: list = ['ALL']):
 			(f'NTOA_{freq}_ref', None, str, "Key ref"),
 		]
 
-	citations = set()
+	citations = set([citationShorthand('RRATALOG')[0][1]])
 	toTable = []
 	for entry in sorted(cat, key = lambda x: x['NAME']):
 		listEntry = []

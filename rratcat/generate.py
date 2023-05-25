@@ -1,4 +1,5 @@
 import copy
+import sys
 
 from tqdm import tqdm
 
@@ -11,7 +12,7 @@ from .scrapers.rratalog import parseRRATalog
 from .parsers.csv import getNumSavedCsvs, getSavedCsvs
 
 from .tools.fixers import mergeEntries
-from .tools.table_maker import isSet, setReferencedKey, generateTable
+from .tools.table_maker import isSet, setReferencedKey, generateTable, getFreqsInCatalogue
 
 
 class wrappedTqdm:
@@ -34,6 +35,7 @@ class wrappedTqdm:
 
 
 def main():
+
 
 	combinedData = []
 	# Decreasing priority
@@ -66,8 +68,17 @@ def main():
 
 
 	combinedData = mergeEntries(mergedData)
+
+	if len(sys.argv) > 1:
+		if sys.argv[1].upper() == 'LIST':
+			print(f"Known frequencies [MHz]: {', '.join(sorted([str(val) for val in getFreqsInCatalogue(combinedData, ['ALL'])]))}")
+			exit(0)
+
+
 	combinedData = psrCatCheckUpdates(combinedData)
-	generateTable(combinedData)
+
+	freqs = [int(val) if val != 'ALL' else str(val) for val in sys.argv[1:]]
+	generateTable(combinedData, freqs if len(freqs) else ['ALL'])
 
 	"""
 	from astropy.coordinates import SkyCoord
