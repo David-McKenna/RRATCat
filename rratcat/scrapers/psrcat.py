@@ -100,7 +100,7 @@ def psrCatCheckUpdates(cat: dict) -> dict:
 			output[idx] = setReferencedKey(output[idx], ourKey, catValue, "PSRCAT")
 			output[idx] = setReferencedKey(output[idx], f"u_{ourKey}", catValue_u, "PSRCAT")
 
-	for key, us in updates.items():
+	for key, us in sorted(updates.items(), key = lambda x: x[0]):
 		print(f"Updates for {key}:")
 		for u in us:
 			print(f"\t{u}")
