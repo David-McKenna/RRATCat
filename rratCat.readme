@@ -23,7 +23,7 @@ File Summary:
  FileName    Lrecl   Records    Explanations
 --------------------------------------------------------------------------------
 ReadMe          80        .  this file
-RRATCat        778      304  
+RRATCat        782      304  
 
 
 --------------------------------------------------------------------------------
@@ -104,85 +104,86 @@ Byte-by-byte Description of file: RRATCat
 443-445   F3.0   Jy     S_peak_820      ? Brightest pulse flux density at 820MHz
 447-451   F5.1   Jy     S_mean_820      [11.0/49.0]? Mean pulse flux density at
                                       820MHz
-453-455   F3.0   h-1    Rate_820        ? Typical hourly pulse rate at 820MHz
-457-461   F5.1   0.001s Width_820       [9.0/68.0]? Typical pulse width at
+453-458   F6.2   h-1    Rate_820        [15.61/79.8]? Typical hourly pulse rate
+                                      at 820MHz
+460-464   F5.1   0.001s Width_820       [9.0/68.0]? Typical pulse width at
                                       820MHz
-463-465   F3.0   ---    NTOA_820        ? Number of observed pulses at 820MHz
-467-469   F3.0   Jy     S_peak_1250     ? Brightest pulse flux density at
+466-468   F3.0   ---    NTOA_820        ? Number of observed pulses at 820MHz
+470-472   F3.0   Jy     S_peak_1250     ? Brightest pulse flux density at
                                       1250MHz
-471-473   F3.0   Jy     S_mean_1250     ? Mean pulse flux density at 1250MHz
-475-477   F3.0   h-1    Rate_1250       ? Typical hourly pulse rate at 1250MHz
-479-481   F3.0   0.001s Width_1250      ? Typical pulse width at 1250MHz
-483-487   F5.1   ---    NTOA_1250       [2.0/27.0]? Number of observed pulses at
+474-476   F3.0   Jy     S_mean_1250     ? Mean pulse flux density at 1250MHz
+478-480   F3.0   h-1    Rate_1250       ? Typical hourly pulse rate at 1250MHz
+482-484   F3.0   0.001s Width_1250      ? Typical pulse width at 1250MHz
+486-490   F5.1   ---    NTOA_1250       [2.0/27.0]? Number of observed pulses at
                                       1250MHz
-489-491   F3.0   Jy     S_peak_1374     ? Brightest pulse flux density at
+492-494   F3.0   Jy     S_peak_1374     ? Brightest pulse flux density at
                                       1374MHz
-493-495   F3.0   Jy     S_mean_1374     ? Mean pulse flux density at 1374MHz
-497-502   F6.1   h-1    Rate_1374       [0.2/436.4]? Typical hourly pulse rate
+496-498   F3.0   Jy     S_mean_1374     ? Mean pulse flux density at 1374MHz
+500-505   F6.1   h-1    Rate_1374       [0.2/436.4]? Typical hourly pulse rate
                                       at 1374MHz
-504-508   F5.1   0.001s Width_1374      [0.3/16.0]? Typical pulse width at
+507-511   F5.1   0.001s Width_1374      [0.3/16.0]? Typical pulse width at
                                       1374MHz
-510-516   F7.1   ---    NTOA_1374       [1.0/4303.0]? Number of observed pulses
+513-519   F7.1   ---    NTOA_1374       [1.0/4303.0]? Number of observed pulses
                                       at 1374MHz
-518-524   F7.1   Jy     S_peak_1400     [12.0/3600.0]? Brightest pulse flux
+521-527   F7.1   Jy     S_peak_1400     [12.0/3600.0]? Brightest pulse flux
                                       density at 1400MHz
-526-529   F4.1   Jy     S_mean_1400     [0.4/2.8]? Mean pulse flux density at
+529-532   F4.1   Jy     S_mean_1400     [0.4/2.8]? Mean pulse flux density at
                                       1400MHz
-531-536   F6.2   h-1    Rate_1400       [0.31/50.3]? Typical hourly pulse rate
+534-539   F6.2   h-1    Rate_1400       [0.31/50.3]? Typical hourly pulse rate
                                       at 1400MHz
-538-542   F5.1   0.001s Width_1400      [7.0/57.0]? Typical pulse width at
+541-545   F5.1   0.001s Width_1400      [7.0/57.0]? Typical pulse width at
                                       1400MHz
-544-546   F3.0   ---    NTOA_1400       ? Number of observed pulses at 1400MHz
-548-558   A11    ---    RA_ref           Key ref
-560-570   A11    ---    DEC_ref          Key ref
-572-582   A11    ---    DM_ref           Key ref
-584-594   A11    ---    P0_ref          ? Key ref
-596-606   A11    ---    P1_ref          ? Key ref
-608-610   A3     ---    S_peak_110_ref  ? Key ref
-612-613   A2     ---    S_mean_110_ref  ? Key ref
-615-616   A2     ---    Rate_110_ref    ? Key ref
-618-620   A3     ---    Width_110_ref   ? Key ref
-622-624   A3     ---    NTOA_110_ref    ? Key ref
-626-628   A3     ---    S_peak_151_ref  ? Key ref
-630-631   A2     ---    S_mean_151_ref  ? Key ref
-633-635   A3     ---    Rate_151_ref    ? Key ref
-637-639   A3     ---    Width_151_ref   ? Key ref
-641-643   A3     ---    NTOA_151_ref    ? Key ref
-645-647   A3     ---    S_peak_327_ref  ? Key ref
-649-650   A2     ---    S_mean_327_ref  ? Key ref
-652-654   A3     ---    Rate_327_ref    ? Key ref
-656-658   A3     ---    Width_327_ref   ? Key ref
-660-662   A3     ---    NTOA_327_ref    ? Key ref
-664-667   A4     ---    S_peak_350_ref  ? Key ref
-669-670   A2     ---    S_mean_350_ref  ? Key ref
-672-675   A4     ---    Rate_350_ref    ? Key ref
-677-678   A2     ---    Width_350_ref   ? Key ref
-680-681   A2     ---    NTOA_350_ref    ? Key ref
-683-684   A2     ---    S_peak_600_ref  ? Key ref
-686-687   A2     ---    S_mean_600_ref  ? Key ref
-689-691   A3     ---    Rate_600_ref    ? Key ref
-693-695   A3     ---    Width_600_ref   ? Key ref
-697-699   A3     ---    NTOA_600_ref    ? Key ref
-701-702   A2     ---    S_peak_820_ref  ? Key ref
-704-706   A3     ---    S_mean_820_ref  ? Key ref
-708-709   A2     ---    Rate_820_ref    ? Key ref
-711-713   A3     ---    Width_820_ref   ? Key ref
-715-716   A2     ---    NTOA_820_ref    ? Key ref
-718-719   A2     ---    S_peak_1250_ref ? Key ref
-721-722   A2     ---    S_mean_1250_ref ? Key ref
-724-725   A2     ---    Rate_1250_ref   ? Key ref
-727-728   A2     ---    Width_1250_ref  ? Key ref
-730-732   A3     ---    NTOA_1250_ref   ? Key ref
-734-735   A2     ---    S_peak_1374_ref ? Key ref
-737-738   A2     ---    S_mean_1374_ref ? Key ref
-740-743   A4     ---    Rate_1374_ref   ? Key ref
-745-747   A3     ---    Width_1374_ref  ? Key ref
-749-751   A3     ---    NTOA_1374_ref   ? Key ref
-753-763   A11    ---    S_peak_1400_ref ? Key ref
-765-767   A3     ---    S_mean_1400_ref ? Key ref
-769-771   A3     ---    Rate_1400_ref   ? Key ref
-773-775   A3     ---    Width_1400_ref  ? Key ref
-777-778   A2     ---    NTOA_1400_ref   ? Key ref
+547-549   F3.0   ---    NTOA_1400       ? Number of observed pulses at 1400MHz
+551-561   A11    ---    RA_ref           Key ref
+563-573   A11    ---    DEC_ref          Key ref
+575-585   A11    ---    DM_ref           Key ref
+587-597   A11    ---    P0_ref          ? Key ref
+599-609   A11    ---    P1_ref          ? Key ref
+611-613   A3     ---    S_peak_110_ref  ? Key ref
+615-616   A2     ---    S_mean_110_ref  ? Key ref
+618-619   A2     ---    Rate_110_ref    ? Key ref
+621-623   A3     ---    Width_110_ref   ? Key ref
+625-627   A3     ---    NTOA_110_ref    ? Key ref
+629-631   A3     ---    S_peak_151_ref  ? Key ref
+633-634   A2     ---    S_mean_151_ref  ? Key ref
+636-638   A3     ---    Rate_151_ref    ? Key ref
+640-642   A3     ---    Width_151_ref   ? Key ref
+644-646   A3     ---    NTOA_151_ref    ? Key ref
+648-650   A3     ---    S_peak_327_ref  ? Key ref
+652-653   A2     ---    S_mean_327_ref  ? Key ref
+655-657   A3     ---    Rate_327_ref    ? Key ref
+659-661   A3     ---    Width_327_ref   ? Key ref
+663-665   A3     ---    NTOA_327_ref    ? Key ref
+667-670   A4     ---    S_peak_350_ref  ? Key ref
+672-673   A2     ---    S_mean_350_ref  ? Key ref
+675-678   A4     ---    Rate_350_ref    ? Key ref
+680-681   A2     ---    Width_350_ref   ? Key ref
+683-684   A2     ---    NTOA_350_ref    ? Key ref
+686-687   A2     ---    S_peak_600_ref  ? Key ref
+689-690   A2     ---    S_mean_600_ref  ? Key ref
+692-694   A3     ---    Rate_600_ref    ? Key ref
+696-698   A3     ---    Width_600_ref   ? Key ref
+700-702   A3     ---    NTOA_600_ref    ? Key ref
+704-705   A2     ---    S_peak_820_ref  ? Key ref
+707-709   A3     ---    S_mean_820_ref  ? Key ref
+711-713   A3     ---    Rate_820_ref    ? Key ref
+715-717   A3     ---    Width_820_ref   ? Key ref
+719-720   A2     ---    NTOA_820_ref    ? Key ref
+722-723   A2     ---    S_peak_1250_ref ? Key ref
+725-726   A2     ---    S_mean_1250_ref ? Key ref
+728-729   A2     ---    Rate_1250_ref   ? Key ref
+731-732   A2     ---    Width_1250_ref  ? Key ref
+734-736   A3     ---    NTOA_1250_ref   ? Key ref
+738-739   A2     ---    S_peak_1374_ref ? Key ref
+741-742   A2     ---    S_mean_1374_ref ? Key ref
+744-747   A4     ---    Rate_1374_ref   ? Key ref
+749-751   A3     ---    Width_1374_ref  ? Key ref
+753-755   A3     ---    NTOA_1374_ref   ? Key ref
+757-767   A11    ---    S_peak_1400_ref ? Key ref
+769-771   A3     ---    S_mean_1400_ref ? Key ref
+773-775   A3     ---    Rate_1400_ref   ? Key ref
+777-779   A3     ---    Width_1400_ref  ? Key ref
+781-782   A2     ---    NTOA_1400_ref   ? Key ref
 
 --------------------------------------------------------------------------------
 
