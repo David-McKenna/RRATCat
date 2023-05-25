@@ -55,7 +55,7 @@ def backupPage(page: str, location: str):
 def loadLastPage(pageName: str) -> str:
 	if len(pageName):
 		cacheDir = user_cache_dir(__name__)
-		with open(cacheDir, 'r') as ref:
+		with open(os.path.join(cacheDir, savePath), 'r') as ref:
 			return ref.read()
 
 	raise RuntimeError(f"No cache found for {savePage}")
