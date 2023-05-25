@@ -348,7 +348,7 @@ def generateTable(cat: dict, freqSubset: list = ['ALL']):
 	cdstab.get_column("RA").setSexaRa()
 	cdstab.get_column("DEC").setSexaDe()
 	maker.add_author("McKenna D. J.")
-	for ref in citations:
+	for ref in sorted(citations, key = lambda x: x.split()[0]):
 		maker.putRef("RRATCat", ref)
 	maker.writeCDSTables()
 	maker.makeReadMe()
