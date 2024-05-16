@@ -20,8 +20,12 @@ keysToCheck = {	'JName': None,
 
 def _psrCatPosToErrorStr(coord: str, err: float) -> str:
 	splitpos = str(coord).split(':')
+	if np.ma.is_masked(err) or float(splitpos[-1]) == 0.0:
+		return coord
+		
 	if (err / float(splitpos[-1])) < 1e-3:
 		err = float(f"{err:.2}")
+
 	return ':'.join(splitpos[:-1]) + f":{float(splitpos[-1])} +/- {err}"
 
 def __psrCatApplyUpdate(entry: dict, query: psrqpy.QueryATNF, baseKeys: dict[str, str]):

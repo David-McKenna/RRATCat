@@ -91,7 +91,6 @@ def parsePosError(val: str) -> tuple[float, float]:
 	elif precision == 3:
 		err.std_dev *= 1.0
 	else:
-		print(val)
 		raise RuntimeError(f"Unexpected precision. {precision}")
 
 	if '(' in val:
@@ -109,16 +108,17 @@ def setPositionSkyCoord(working: dict, coord: SkyCoord, ref: str, precision: int
 	return setPosition(working, raStr, decStr, ref)
 
 def setPosition(working: dict, ra: str, dec: str, ref: str) -> dict:
-	if '(' in ra or '+/-' in ra:
+	if '(' in ra or ('+/-' in ra and not '+/- --' in ra):
 		val = parsePosError(ra)
 		ra = val[0]
 		err = val[1] #* u.hourangle / 24 / 60 # 15 sec = 1 arcsec # Commenting out due to table building issues
 		working = setReferencedKey(working, 'u_RAs', err, ref)
-	if '(' in dec or '+/-' in dec:
+	if '(' in dec or ('+/-' in dec and not '+/- --' in dec):
 		val = parsePosError(dec) 
 		dec = val[0]
 		err = val[1] #* u.arcsecond # Commenting out due to table building issues
 		working = setReferencedKey(working, 'u_DECs', err, ref)
+
 
 	for coord in ['RA', 'DEC']:
 		refKey = f'u_{coord}_ref'
@@ -230,7 +230,7 @@ citationMap = {
 	'CHIME_FRB_CAT': ('CGS', 'CHIME Galactic Sources Catalogue, (https://www.chime-frb.ca/galactic)'),
 	'Rane et al. 2015': ('R15', 'Rane et al, A search for rotating radio transients and fast radio bursts in the Parkes high-latitude pulsar survey (10.1093/mnras/stv2404)'),
 	'Zhou et al. 2023': ('Z23', 'Zhou et al, The FAST Galactic Plane Pulsar Snapshot Survey: II. Discovery of 76 Galactic rotating radio transients and their enigma (10.1088/1674-4527/accc76)'),
-	'Cui et al. 2017': ('C17', 'Cui et al., Timing Solution and Single-pulse Properties for Eight Rotating Radio Transients (10.3847/1538-4357/aa6aa9'),
+	'Cui et al. 2017': ('C17', 'Cui et al., Timing Solution and Single-pulse Properties for Eight Rotating Radio Transients (10.3847/1538-4357/aa6aa9)	'),
 	'SK': ('SK', 'Shitov et al, Detection of the new rotating radio transient pulsar PSR J2225+35 (10.1134/S1063772909060080, RRATalog)'),
 	'LOTASS': ('LTS', 'LOTAAS (https://www.astron.nl/lotaas/index-full.html , RRATalog)'),
 	'BSA LPI RRATs': ('BSA', 'BSA Analytics Transients (https://bsa-analytics.prao.ru/en/transients/rrat/)'),
@@ -238,7 +238,8 @@ citationMap = {
 	'SUPERB': ('SPRB', 'SUPERB Survey, (https://web.archive.org/web/20220626134940/https://sites.google.com/site/publicsuperb/discoveries/ , RRATalog)'),
 	'Dong et al. 2023': ('D23', 'Dong et al., The second set of pulsar discoveries by CHIME/FRB/Pulsar: 14 Rotating Radio Transients and 7 pulsars ()'),
 	'AODrift': ('AOD', 'Discoveries from the AO 327 MHz Drift Survey (http://www.naic.edu/~deneva/drift-search/ , RRATalog)'),
-	'PSRCAT': ('PSCT', 'The ATNF Pulsar Catalogue (https://www.atnf.csiro.au/research/pulsar/psrcat/)')
+	'PSRCAT': ('PSCT', 'The ATNF Pulsar Catalogue (https://www.atnf.csiro.au/research/pulsar/psrcat/)'),
+	'Deneva et al. (2024+)': ("AOD2", 'Further updates to the AO327 catalogue, (latest reference, contents not present in 10.48550/arXiv.2401.01947)')
 
 }
 
@@ -286,7 +287,7 @@ def generateTable(cat: dict, freqSubset: list = ['ALL']):
 			(f'S_mean_{freq}', u.jansky, float, f"Mean pulse flux density at {freq}MHz"),
 			(f'Rate_{freq}', 1. / u.hour, float, f"Typical hourly pulse rate at {freq}MHz"),
 			(f'Width_{freq}', u.second / 1000, float, f"Typical pulse width at {freq}MHz"),
-			(f'NTOA_{freq}', u.dimensionless_unscaled, float, f"Number of observed pulses at {freq}MHz"),
+			(f'NTOA_{freq}', None, float, f"Number of observed pulses at {freq}MHz"),
 		]
 
 	columnsUnits += [
@@ -347,9 +348,9 @@ def generateTable(cat: dict, freqSubset: list = ['ALL']):
 	]
 	for (column, precision) in precisions:
 		table[column].format = precision
-	print(table)
+
 	maker = cdspyreadme.CDSTablesMaker()
-	cdstab = maker.addTable(table, name = "RRATCat")
+	cdstab = maker.addTable(table, name = "rratCat.catalogue")
 	cdstab.get_column("RA").setSexaRa()
 	cdstab.get_column("DEC").setSexaDe()
 	maker.add_author("McKenna D. J.")

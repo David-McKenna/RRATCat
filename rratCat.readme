@@ -22,12 +22,12 @@ File Summary:
 --------------------------------------------------------------------------------
  FileName    Lrecl   Records    Explanations
 --------------------------------------------------------------------------------
-ReadMe          80        .  this file
-RRATCat        782      304  
+ReadMe             80        .  this file
+rratCat.catalogue 775      392  
 
 
 --------------------------------------------------------------------------------
-Byte-by-byte Description of file: RRATCat
+Byte-by-byte Description of file: rratCat.catalogue
 --------------------------------------------------------------------------------
  Bytes Format Units  Label     Explanations
 --------------------------------------------------------------------------------
@@ -43,160 +43,161 @@ Byte-by-byte Description of file: RRATCat
  49- 60   F12.9  arcsec DEs             Declination (seconds)
  62- 67   E6.1   arcsec u_DECs          [0.0/2160.0]? Uncertainty of Declination
                                       (arcseconds)
- 69- 88   F20.16 deg    GLON            [0.3/359.87] Galactic Longitude
- 90-111   F22.18 deg    GLAT            [-60.2/79.92] Galatic Latitude
-113-131   F19.15 pc.cm-3 DM              [2.64/786.0] Dispersion measure
-133-138   E6.1   pc.cm-3 u_DM            [0.0/20.0]? Uncertainty of Dispersion
+ 69- 89   F21.17 deg    GLON            [0.3/359.87] Galactic Longitude
+ 91-112   F22.18 deg    GLAT            [-61.59/79.92] Galatic Latitude
+114-122   F9.5   pc.cm-3 DM              [2.5/786.0] Dispersion measure
+124-129   E6.1   pc.cm-3 u_DM            [0.0/20.0]? Uncertainty of Dispersion
                                       measure
-140-160   F21.17 1000pc DIST            [0.23/12.24]? Source distance (as per
+131-151   F21.17 1000pc DIST            [0.16/12.24]? Source distance (as per
                                       YWM16)
-162-183   F22.19 s      P0              [0.0/7.71]? Rotation Period
-185-206   E22.17 s      u_P0            [0.0/2.21]? Uncertainty of rotation
+153-174   F22.19 s      P0              [0.0/7.71]? Rotation Period
+176-198   E23.17 s      u_P0            [0.0/2.21]? Uncertainty of rotation
                                       period
-208-230   E23.17 10-15  P1              [0.0/562.68]? Spin-down Rate (seconds
+200-222   E23.17 10-15  P1              [-2.77/562.68]? Spin-down Rate (seconds
                                       per second)
-232-254   E23.17 10-15  u_P1            [0.0/5.0]? Uncertainty of spin down rate
+224-246   E23.17 10-15  u_P1            [0.0/5.0]? Uncertainty of spin down rate
                                       (seconds per second)
-256-278   E23.17 Myr    AGE             [0.0/6.83]? Characteristic Age
-280-302   F23.19 10+12G B               [0.0/49.57]? Surface Magnetic Field
-304-308   F5.1   Jy     S_peak_110      [2.29/40.0]? Brightest pulse flux
-                                      density at 110MHz
-310-312   F3.0   Jy     S_mean_110      ? Mean pulse flux density at 110MHz
-314-317   F4.1   h-1    Rate_110        [9.19/9.2]? Typical hourly pulse rate at
+248-269   E22.16 Myr    AGE             [-0.03/6.83]? Characteristic Age
+271-294   F24.20 10+12G B               [0.0/49.57]? Surface Magnetic Field
+296-300   F5.1   Jy     S_peak_110      [1.9/54.0]? Brightest pulse flux density
+                                      at 110MHz
+302-304   F3.0   Jy     S_mean_110      ? Mean pulse flux density at 110MHz
+306-309   F4.1   h-1    Rate_110        [9.19/9.2]? Typical hourly pulse rate at
                                       110MHz
-319-323   F5.1   0.001s Width_110       [12.5/55.0]? Typical pulse width at
+311-316   F6.1   0.001s Width_110       [12.0/120.0]? Typical pulse width at
                                       110MHz
-325-329   F5.1   ---    NTOA_110        [1.0/10.0]? Number of observed pulses at
+318-322   F5.1   ---    NTOA_110        [1.0/45.0]? Number of observed pulses at
                                       110MHz
-331-336   F6.1   Jy     S_peak_151      [7.0/131.0]? Brightest pulse flux
+324-329   F6.1   Jy     S_peak_151      [7.0/131.0]? Brightest pulse flux
                                       density at 151MHz
-338-340   F3.0   Jy     S_mean_151      ? Mean pulse flux density at 151MHz
-342-348   F7.3   h-1    Rate_151        [0.1/46.0]? Typical hourly pulse rate at
+331-333   F3.0   Jy     S_mean_151      ? Mean pulse flux density at 151MHz
+335-341   F7.3   h-1    Rate_151        [0.1/46.0]? Typical hourly pulse rate at
                                       151MHz
-350-354   F5.1   0.001s Width_151       [2.6/49.0]? Typical pulse width at
+343-347   F5.1   0.001s Width_151       [2.6/49.0]? Typical pulse width at
                                       151MHz
-356-361   F6.1   ---    NTOA_151        [3.0/371.0]? Number of observed pulses
+349-354   F6.1   ---    NTOA_151        [3.0/371.0]? Number of observed pulses
                                       at 151MHz
-363-366   F4.1   Jy     S_peak_327      [0.1/0.3]? Brightest pulse flux density
+356-359   F4.1   Jy     S_peak_327      [0.1/0.3]? Brightest pulse flux density
                                       at 327MHz
-368-370   F3.0   Jy     S_mean_327      ? Mean pulse flux density at 327MHz
-372-376   F5.1   h-1    Rate_327        [2.0/47.0]? Typical hourly pulse rate at
+361-363   F3.0   Jy     S_mean_327      ? Mean pulse flux density at 327MHz
+365-369   F5.1   h-1    Rate_327        [2.0/47.0]? Typical hourly pulse rate at
                                       327MHz
-378-382   F5.1   0.001s Width_327       [2.29/22.5]? Typical pulse width at
+371-375   F5.1   0.001s Width_327       [2.29/22.5]? Typical pulse width at
                                       327MHz
-384-387   F4.1   ---    NTOA_327        [1.0/3.0]? Number of observed pulses at
+377-380   F4.1   ---    NTOA_327        [1.0/3.0]? Number of observed pulses at
                                       327MHz
-389-394   F6.1   Jy     S_peak_350      [8.0/300.0]? Brightest pulse flux
+382-387   F6.1   Jy     S_peak_350      [8.0/300.0]? Brightest pulse flux
                                       density at 350MHz
-396-398   F3.0   Jy     S_mean_350      ? Mean pulse flux density at 350MHz
-400-405   F6.1   h-1    Rate_350        [26.0/450.0]? Typical hourly pulse rate
+389-391   F3.0   Jy     S_mean_350      ? Mean pulse flux density at 350MHz
+393-398   F6.1   h-1    Rate_350        [26.0/450.0]? Typical hourly pulse rate
                                       at 350MHz
-407-409   F3.0   0.001s Width_350       ? Typical pulse width at 350MHz
-411-413   F3.0   ---    NTOA_350        ? Number of observed pulses at 350MHz
-415-417   F3.0   Jy     S_peak_600      ? Brightest pulse flux density at 600MHz
-419-421   F3.0   Jy     S_mean_600      ? Mean pulse flux density at 600MHz
-423-428   F6.2   h-1    Rate_600        [0.09/21.4]? Typical hourly pulse rate
+400-402   F3.0   0.001s Width_350       ? Typical pulse width at 350MHz
+404-406   F3.0   ---    NTOA_350        ? Number of observed pulses at 350MHz
+408-410   F3.0   Jy     S_peak_600      ? Brightest pulse flux density at 600MHz
+412-414   F3.0   Jy     S_mean_600      ? Mean pulse flux density at 600MHz
+416-421   F6.2   h-1    Rate_600        [0.09/21.4]? Typical hourly pulse rate
                                       at 600MHz
-430-434   F5.1   0.001s Width_600       [13.0/32.0]? Typical pulse width at
+423-427   F5.1   0.001s Width_600       [13.0/32.0]? Typical pulse width at
                                       600MHz
-436-441   F6.1   ---    NTOA_600        [8.0/136.0]? Number of observed pulses
+429-434   F6.1   ---    NTOA_600        [8.0/549.0]? Number of observed pulses
                                       at 600MHz
-443-445   F3.0   Jy     S_peak_820      ? Brightest pulse flux density at 820MHz
-447-451   F5.1   Jy     S_mean_820      [11.0/49.0]? Mean pulse flux density at
+436-438   F3.0   Jy     S_peak_820      ? Brightest pulse flux density at 820MHz
+440-444   F5.1   Jy     S_mean_820      [11.0/49.0]? Mean pulse flux density at
                                       820MHz
-453-458   F6.2   h-1    Rate_820        [15.61/79.8]? Typical hourly pulse rate
+446-451   F6.2   h-1    Rate_820        [15.61/79.8]? Typical hourly pulse rate
                                       at 820MHz
-460-464   F5.1   0.001s Width_820       [9.0/68.0]? Typical pulse width at
+453-457   F5.1   0.001s Width_820       [9.0/68.0]? Typical pulse width at
                                       820MHz
-466-468   F3.0   ---    NTOA_820        ? Number of observed pulses at 820MHz
-470-472   F3.0   Jy     S_peak_1250     ? Brightest pulse flux density at
+459-461   F3.0   ---    NTOA_820        ? Number of observed pulses at 820MHz
+463-465   F3.0   Jy     S_peak_1250     ? Brightest pulse flux density at
                                       1250MHz
-474-476   F3.0   Jy     S_mean_1250     ? Mean pulse flux density at 1250MHz
-478-480   F3.0   h-1    Rate_1250       ? Typical hourly pulse rate at 1250MHz
-482-484   F3.0   0.001s Width_1250      ? Typical pulse width at 1250MHz
-486-490   F5.1   ---    NTOA_1250       [2.0/27.0]? Number of observed pulses at
+467-469   F3.0   Jy     S_mean_1250     ? Mean pulse flux density at 1250MHz
+471-473   F3.0   h-1    Rate_1250       ? Typical hourly pulse rate at 1250MHz
+475-477   F3.0   0.001s Width_1250      ? Typical pulse width at 1250MHz
+479-483   F5.1   ---    NTOA_1250       [2.0/27.0]? Number of observed pulses at
                                       1250MHz
-492-494   F3.0   Jy     S_peak_1374     ? Brightest pulse flux density at
+485-487   F3.0   Jy     S_peak_1374     ? Brightest pulse flux density at
                                       1374MHz
-496-498   F3.0   Jy     S_mean_1374     ? Mean pulse flux density at 1374MHz
-500-505   F6.1   h-1    Rate_1374       [0.2/436.4]? Typical hourly pulse rate
+489-491   F3.0   Jy     S_mean_1374     ? Mean pulse flux density at 1374MHz
+493-498   F6.1   h-1    Rate_1374       [0.2/436.4]? Typical hourly pulse rate
                                       at 1374MHz
-507-511   F5.1   0.001s Width_1374      [0.3/16.0]? Typical pulse width at
+500-504   F5.1   0.001s Width_1374      [0.3/16.0]? Typical pulse width at
                                       1374MHz
-513-519   F7.1   ---    NTOA_1374       [1.0/4303.0]? Number of observed pulses
+506-512   F7.1   ---    NTOA_1374       [1.0/4303.0]? Number of observed pulses
                                       at 1374MHz
-521-527   F7.1   Jy     S_peak_1400     [12.0/3600.0]? Brightest pulse flux
+514-520   F7.1   Jy     S_peak_1400     [12.0/3600.0]? Brightest pulse flux
                                       density at 1400MHz
-529-532   F4.1   Jy     S_mean_1400     [0.4/2.8]? Mean pulse flux density at
+522-525   F4.1   Jy     S_mean_1400     [0.4/2.8]? Mean pulse flux density at
                                       1400MHz
-534-539   F6.2   h-1    Rate_1400       [0.31/50.3]? Typical hourly pulse rate
+527-532   F6.2   h-1    Rate_1400       [0.31/50.3]? Typical hourly pulse rate
                                       at 1400MHz
-541-545   F5.1   0.001s Width_1400      [7.0/57.0]? Typical pulse width at
+534-538   F5.1   0.001s Width_1400      [7.0/57.0]? Typical pulse width at
                                       1400MHz
-547-549   F3.0   ---    NTOA_1400       ? Number of observed pulses at 1400MHz
-551-561   A11    ---    RA_ref           Key ref
-563-573   A11    ---    DEC_ref          Key ref
-575-585   A11    ---    DM_ref           Key ref
-587-597   A11    ---    P0_ref          ? Key ref
-599-609   A11    ---    P1_ref          ? Key ref
-611-613   A3     ---    S_peak_110_ref  ? Key ref
-615-616   A2     ---    S_mean_110_ref  ? Key ref
-618-619   A2     ---    Rate_110_ref    ? Key ref
-621-623   A3     ---    Width_110_ref   ? Key ref
-625-627   A3     ---    NTOA_110_ref    ? Key ref
-629-631   A3     ---    S_peak_151_ref  ? Key ref
-633-634   A2     ---    S_mean_151_ref  ? Key ref
-636-638   A3     ---    Rate_151_ref    ? Key ref
-640-642   A3     ---    Width_151_ref   ? Key ref
-644-646   A3     ---    NTOA_151_ref    ? Key ref
-648-650   A3     ---    S_peak_327_ref  ? Key ref
-652-653   A2     ---    S_mean_327_ref  ? Key ref
-655-657   A3     ---    Rate_327_ref    ? Key ref
-659-661   A3     ---    Width_327_ref   ? Key ref
-663-665   A3     ---    NTOA_327_ref    ? Key ref
-667-670   A4     ---    S_peak_350_ref  ? Key ref
-672-673   A2     ---    S_mean_350_ref  ? Key ref
-675-678   A4     ---    Rate_350_ref    ? Key ref
-680-681   A2     ---    Width_350_ref   ? Key ref
-683-684   A2     ---    NTOA_350_ref    ? Key ref
-686-687   A2     ---    S_peak_600_ref  ? Key ref
-689-690   A2     ---    S_mean_600_ref  ? Key ref
-692-694   A3     ---    Rate_600_ref    ? Key ref
-696-698   A3     ---    Width_600_ref   ? Key ref
-700-702   A3     ---    NTOA_600_ref    ? Key ref
-704-705   A2     ---    S_peak_820_ref  ? Key ref
-707-709   A3     ---    S_mean_820_ref  ? Key ref
-711-713   A3     ---    Rate_820_ref    ? Key ref
-715-717   A3     ---    Width_820_ref   ? Key ref
-719-720   A2     ---    NTOA_820_ref    ? Key ref
-722-723   A2     ---    S_peak_1250_ref ? Key ref
-725-726   A2     ---    S_mean_1250_ref ? Key ref
-728-729   A2     ---    Rate_1250_ref   ? Key ref
-731-732   A2     ---    Width_1250_ref  ? Key ref
-734-736   A3     ---    NTOA_1250_ref   ? Key ref
-738-739   A2     ---    S_peak_1374_ref ? Key ref
-741-742   A2     ---    S_mean_1374_ref ? Key ref
-744-747   A4     ---    Rate_1374_ref   ? Key ref
-749-751   A3     ---    Width_1374_ref  ? Key ref
-753-755   A3     ---    NTOA_1374_ref   ? Key ref
-757-767   A11    ---    S_peak_1400_ref ? Key ref
-769-771   A3     ---    S_mean_1400_ref ? Key ref
-773-775   A3     ---    Rate_1400_ref   ? Key ref
-777-779   A3     ---    Width_1400_ref  ? Key ref
-781-782   A2     ---    NTOA_1400_ref   ? Key ref
+540-542   F3.0   ---    NTOA_1400       ? Number of observed pulses at 1400MHz
+544-554   A11    ---    RA_ref           Key ref
+556-566   A11    ---    DEC_ref          Key ref
+568-578   A11    ---    DM_ref           Key ref
+580-590   A11    ---    P0_ref          ? Key ref
+592-602   A11    ---    P1_ref          ? Key ref
+604-606   A3     ---    S_peak_110_ref  ? Key ref
+608-609   A2     ---    S_mean_110_ref  ? Key ref
+611-612   A2     ---    Rate_110_ref    ? Key ref
+614-616   A3     ---    Width_110_ref   ? Key ref
+618-620   A3     ---    NTOA_110_ref    ? Key ref
+622-624   A3     ---    S_peak_151_ref  ? Key ref
+626-627   A2     ---    S_mean_151_ref  ? Key ref
+629-631   A3     ---    Rate_151_ref    ? Key ref
+633-635   A3     ---    Width_151_ref   ? Key ref
+637-639   A3     ---    NTOA_151_ref    ? Key ref
+641-643   A3     ---    S_peak_327_ref  ? Key ref
+645-646   A2     ---    S_mean_327_ref  ? Key ref
+648-650   A3     ---    Rate_327_ref    ? Key ref
+652-654   A3     ---    Width_327_ref   ? Key ref
+656-658   A3     ---    NTOA_327_ref    ? Key ref
+660-663   A4     ---    S_peak_350_ref  ? Key ref
+665-666   A2     ---    S_mean_350_ref  ? Key ref
+668-671   A4     ---    Rate_350_ref    ? Key ref
+673-674   A2     ---    Width_350_ref   ? Key ref
+676-677   A2     ---    NTOA_350_ref    ? Key ref
+679-680   A2     ---    S_peak_600_ref  ? Key ref
+682-683   A2     ---    S_mean_600_ref  ? Key ref
+685-687   A3     ---    Rate_600_ref    ? Key ref
+689-691   A3     ---    Width_600_ref   ? Key ref
+693-695   A3     ---    NTOA_600_ref    ? Key ref
+697-698   A2     ---    S_peak_820_ref  ? Key ref
+700-702   A3     ---    S_mean_820_ref  ? Key ref
+704-706   A3     ---    Rate_820_ref    ? Key ref
+708-710   A3     ---    Width_820_ref   ? Key ref
+712-713   A2     ---    NTOA_820_ref    ? Key ref
+715-716   A2     ---    S_peak_1250_ref ? Key ref
+718-719   A2     ---    S_mean_1250_ref ? Key ref
+721-722   A2     ---    Rate_1250_ref   ? Key ref
+724-725   A2     ---    Width_1250_ref  ? Key ref
+727-729   A3     ---    NTOA_1250_ref   ? Key ref
+731-732   A2     ---    S_peak_1374_ref ? Key ref
+734-735   A2     ---    S_mean_1374_ref ? Key ref
+737-740   A4     ---    Rate_1374_ref   ? Key ref
+742-744   A3     ---    Width_1374_ref  ? Key ref
+746-748   A3     ---    NTOA_1374_ref   ? Key ref
+750-760   A11    ---    S_peak_1400_ref ? Key ref
+762-764   A3     ---    S_mean_1400_ref ? Key ref
+766-768   A3     ---    Rate_1400_ref   ? Key ref
+770-772   A3     ---    Width_1400_ref  ? Key ref
+774-775   A2     ---    NTOA_1400_ref   ? Key ref
 
 --------------------------------------------------------------------------------
 
 
 
 See also:
+ RRATCat : AOD2: Further updates to the AO327 catalogue, (latest reference, contents not present in 10.48550/arXiv.2401.01947)
  RRATCat : AOD: Discoveries from the AO 327 MHz Drift Survey (http://www.naic.edu/~deneva/drift-search/ , RRATalog)
  RRATCat : BB: Unknown, RRATalog
  RRATCat : BS10: Burke-Spolaor, S. & Bailes, M., The millisecond radio sky: transients from a blind single-pulse search (10.1111/j.1365-2966.2009.15965.x, RRATalog)
  RRATCat : BS11: Burke-Spolaor et al., The High Time Resolution Universe Pulsar Survey - III. Single-pulse searches and preliminary analysis (10.1111/j.1365-2966.2011.18521.x, RRATalog)
  RRATCat : BSA: BSA Analytics Transients (https://bsa-analytics.prao.ru/en/transients/rrat/)
  RRATCat : C16: Cui et al., Timing Solution and Single-pulse Properties for Eight Rotating Radio Transients (10.3847/1538-4357/aa6aa9, RRATalog)
- RRATCat : C17: Cui et al., Timing Solution and Single-pulse Properties for Eight Rotating Radio Transients (10.3847/1538-4357/aa6aa9
+ RRATCat : C17: Cui et al., Timing Solution and Single-pulse Properties for Eight Rotating Radio Transients (10.3847/1538-4357/aa6aa9)	
  RRATCat : CGS: CHIME Galactic Sources Catalogue, (https://www.chime-frb.ca/galactic)
  RRATCat : D16: Deneva et al., New Discoveries from the Arecibo 327 MHz Drift Pulsar Survey Radio Transient Search (10.3847/0004-637X/821/1/10)
  RRATCat : D23: Dong et al., The second set of pulsar discoveries by CHIME/FRB/Pulsar: 14 Rotating Radio Transients and 7 pulsars ()

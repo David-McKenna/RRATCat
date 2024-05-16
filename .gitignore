@@ -1,3 +1,4 @@
 *.pyc
 *page
 *.egg-info/*
+build/*

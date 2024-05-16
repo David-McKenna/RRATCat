@@ -14,6 +14,7 @@ UNKOWN_VARIABLE_FREQ = np.nan
 defaultInformation = {
 	'Cui2017.csv': (UNKOWN_VARIABLE_FREQ, "Cui et al. 2017"),
 	'Deneva2016.csv': (ARECIBO_DRIFT_FREQ, "Deneva et al. 2016"),
+	'Deneva2024_manual.csv': (ARECIBO_DRIFT_FREQ, "Deneva et al. (2024+)"),
 	'DongCHIMEDetections.csv': (CHIME_FREQ, "Dong et al. 2023"),
 	'DongCHIMENoLocalisation.csv': (CHIME_FREQ, "Dong et al. 2023"),
 	'DongCHIMETimed.csv': (CHIME_FREQ, "Dong et al. 2023"),
@@ -99,7 +100,7 @@ def getSavedCsvs(additional: list[str] = [], loadDefaults: bool = True) -> list[
 					if key in freqVarDefaultDict:
 						key = f'{key}_{freq}'
 					if isinstance(val, str):
-						if val == '--':
+						if val == '--' or key == 'Notes':
 							continue
 						else:
 							if '(' in val:
